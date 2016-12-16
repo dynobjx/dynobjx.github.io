@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css"/>
+  </head>
+  <body onload="initMap(); goToWe();">
+    <script>
+      function initMap () {
+        var mymap = L.map('mapid').setView([14.587684, 121.0591433], 17);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+        var marker = L.marker([14.587684, 121.0591433]).addTo(mymap);
+        marker.bindPopup("<b>Dynamic Objx Labs Inc.</b>").openPopup();
+      };
+
+      function goToLets () {
+        $('html,body').animate({
+          scrollTop: $("#lets").offset().top},
+          'slow');
+      };
+
+      function goToAbout () {
+        $('html,body').animate({
+          scrollTop: $("#about").offset().top},
+          'slow');
+      };
+
+      function goToService () {
+        $('html,body').animate({
+          scrollTop: $("#service").offset().top},
+          'slow');
+      };
+
+      function goToBlog () {
+        $('html,body').animate({
+          scrollTop: $("#blog").offset().top},
+          'slow');
+      };
+
+      function goToContact () {
+        $('html,body').animate({
+          scrollTop: $("#contact").offset().top},
+          'slow');
+      };
+
+      function goToWe () {
+        navigate('we-nav', 'we-text');
+        $('html,body').animate({
+          scrollTop: $("#we").offset().top},
+          'slow');
+      };
+
+      function navigate(nav, text) {
+        if (!$('#' + nav).hasClass('active')) {
+          remove(nav);
+          $('#' + nav).addClass('active');
+          $('#' + text).fadeIn(180);
+          $('#' + text).removeClass('inactive');
+          if (nav === 'contact-nav') {
+            $('#verticalContact').fadeIn(500);
+          } else {
+            $('#verticalContact').fadeOut(10);
+          }
+        }
+      };
+
+      function remove(cl) {
+        if (cl !== 'we-nav') { $('#we-nav').removeClass('active'); }
+        if (cl !== 'lets-nav') { $('#lets-nav').removeClass('active'); $('#lets-text').fadeOut(0); }
+        if (cl !== 'about-nav') { $('#about-nav').removeClass('active'); $('#about-text').fadeOut(0); }
+        if (cl !== 'services-nav') { $('#services-nav').removeClass('active'); $('#service-text').fadeOut(0); }
+        if (cl !== 'blog-nav') { $('#blog-nav').removeClass('active'); $('#blog-text').fadeOut(0); }
+        if (cl !== 'contact-nav') { $('#contact-nav').removeClass('active'); $('#contact-text').fadeOut(0); }
+      };
+
+      function isVisible($el) {
+        var winTop = $(window).scrollTop();
+        var winBottom = winTop + $(window).height();
+        var elTop = $el.offset().top;
+        var elBottom = elTop + $el.height();
+        return ((elBottom<= winBottom) && (elTop >= winTop));
+      }
+
+      $(function() {
+        $(window).scroll(function() {
+          if (isVisible($("#first")) || isVisible($("#first-xs"))) {
+            navigate('we-nav', 'we-text');
+          } else if (isVisible($("#second")) || isVisible($("#second-xs"))) {
+            navigate('lets-nav', 'lets-text');
+          } else if (isVisible($("#third")) || isVisible($("#third-xs"))) {
+            navigate('about-nav', 'about-text');
+          } else if (isVisible($("#fourth")) || isVisible($("#fourth-xs"))) {
+            navigate('services-nav', 'service-text');
+          } else if (isVisible($("#fifth")) || isVisible($("#fifth-xs"))) {
+            navigate('blog-nav', 'blog-text');
+          } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
+            navigate('contact-nav', 'contact-text');
+          }
+        });
+      });
+    </script>
+
+    <div class="vertical-contact" id="verticalContact"></div>
+    <div class="vertical-line">
+      <div class="we diamond" onclick="goToWe();" id="we-nav"></div>
+      <div class="lets diamond" onclick="goToLets();" id="lets-nav">
+        <span class="nav-text inactive" id="lets-text">LET'S DO SOFTWARE TOGETHER</span>
+      </div>
+      <div class="about diamond" onclick="goToAbout();" id="about-nav">
+        <span class="nav-text inactive" id="about-text">ABOUT US</span>
+      </div>
+      <div class="services diamond" onclick="goToService();" id="services-nav">
+        <span class="nav-text inactive" id="service-text">SERVICES</span>
+      </div>
+      <div class="blog diamond" onclick="goToBlog();" id="blog-nav">
+        <span class="nav-text inactive" id="blog-text">BLOG</span>
+      </div>
+      <div class="contact diamond" onclick="goToContact();" id="contact-nav">
+        <span class="nav-text inactive" id="contact-text">CONTACT US</span>
+      </div>
+    </div>
+    <div class="navbar navbar-static-top header-shadow no-margin" id="we">
+      <div class="container">
+        <div class="row">
+          <div class="pull-left header-padding">
+            <img src="./00_dynobjx_logo_header.png" class="dynamic-image">            
+          </div>
+          <div class="pull-right header-padding">
+            <input type="button" class="btn contact-btn dynamic-text" value="Contact us">
+          </div>          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 no-padding bg-black">
+      <div class="col-sm-6 no-padding image-height first-image hidden-xs">
+        <div class="triangle-left" onclick="goToLets();"></div>
+        <div class="mid-left" onclick="goToLets();"></div>
+        <div class="triangle-right" onclick="goToLets();"></div>
+        <div class="mid-right" onclick="goToLets();"></div>
+      </div>
+      <div class="col-sm-6 no-padding text-body image-height we-dyn">
+        <div class="hidden-xs">
+          <div class="col-sm-10 col-sm-offset-1 dynamic-text we">
+            <h2 class="dynamic-text title-text we">WE ARE DYNAMIC OBJX LABS INC.</h2>
+            <br><br>
+            <div class="text-color we" id="first">
+              <p class="content-margin">
+                Hello world.
+              </p>
+              <p class="content-margin">
+                We are Dynamic Objx Labs Inc, a software development company based in Manila, Philippines. We specialize in building web-based applications, mobile device applications and Software-as-a-service(SAAS) products.
+              </p>
+              <p class="content-margin">
+                We aim to produce excellent products through the use of open-source frameworks and tools and with the best creative and technical minds. We subscribs to Agile Software Development methodologies and practices such as Scrum, Extreme Programming, Continuous Integration etc.
+              </p>
+              <p class="content-margin">
+                We aim to deliver excellent software using tools such as Agile methodologies, the Pragmatic Programmer principles and open-source frameworks and libraries for Java, Android, IOS and RubyOnRails (RoR) and to showcase Filipino skill and expertise in the writing software and building relevant software products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="visible-xs image-height with-scroll">
+        <div class="col-xs-10 col-xs-offset-1 dynamic-text we" id="first-xs">
+          <h2 class="dynamic-text title-text we">WE ARE DYNAMIC OBJX LABS INC.</h2>
+          <br class="hidden-xs"><br>
+          <div class="text-color we">
+            <p class="content-margin">
+              Hello world.
+            </p>
+            <p class="content-margin">
+              We are Dynamic Objx Labs Inc, a software development company based in Manila, Philippines. We specialize in building web-based applications, mobile device applications and Software-as-a-service(SAAS) products.
+            </p>
+            <p class="content-margin">
+              We aim to produce excellent products through the use of open-source frameworks and tools and with the best creative and technical minds. We subscribs to Agile Software Development methodologies and practices such as Scrum, Extreme Programming, Continuous Integration etc.
+            </p>
+            <p class="content-margin">
+              We aim to deliver excellent software using tools such as Agile methodologies, the Pragmatic Programmer principles and open-source frameworks and libraries for Java, Android, IOS and RubyOnRails (RoR) and to showcase Filipino skill and expertise in the writing software and building relevant software products.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- LETS DO SOFTWARE -->
+    <div class="col-sm-12 no-padding page lets-do image-height" id="lets">
+      <div class="content-height bg-black">
+        <div class="col-sm-6 no-padding content-height lets-do-image hidden-xs">
+          <div class="cursor">          
+            <div class="triangle-left" onclick="goToAbout();"></div>
+            <div class="mid-left" onclick="goToAbout();"></div>
+            <div class="triangle-right" onclick="goToAbout();"></div>
+            <div class="mid-right" onclick="goToAbout();"></div>
+          </div>
+        </div>
+        <div class="col-sm-6 second text-body content-height lets-xs">
+          <div class="hidden-xs">
+            <div class="col-sm-12">
+              <div class="pull-right header-padding">
+                <input type="button" class="btn contact-btn dynamic-text second-contact" value="Contact us">
+              </div>  
+            </div>
+            <div class="dynamic-text col-sm-offset-1 col-sm-10">
+              <h1 class="title-text second-title content-margin">LET'S DO SOFTWARE TOGETHER</h1>
+              <br><br>
+              <div class="text-color second-text" id="second">
+                <p class="content-margin">
+                  Java, iOS (iPhone - iPad), Android, Play Framework 2.0
+                </p>
+                <p class="content-margin">
+                  Web & Mobile App Development
+                </p>
+                <p class="content-margin">
+                  Enterprise Application Development & Consultancy
+                </p>
+                <p class="content-margin">
+                  Restful API Development
+                </p>
+                <p class="content-margin">
+                  Rapid Prototyping
+                </p>
+                <p class="content-margin">
+                  Test, Build, Deploy Automation (AWS)
+                </p>
+                <p class="content-margin">
+                  Large Dataset Processing, Analysis and Reporting
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="visible-xs content-height with-scroll">
+          <div class="col-xs-12">
+            <div class="pull-right header-padding">
+              <input type="button" class="btn contact-btn dynamic-text second-contact" value="Contact us">
+            </div>  
+          </div>
+          <div class="dynamic-text col-xs-10 col-xs-offset-1">
+            <h1 class="title-text second-title content-margin" id="second-xs">LET'S DO SOFTWARE TOGETHER</h1>
+            <br class="hidden-xs"><br>
+            <div class="text-color second-text">
+              <p class="content-margin">
+                Java, iOS (iPhone - iPad), Android, Play Framework 2.0
+              </p>
+              <p class="content-margin">
+                Web & Mobile App Development
+              </p>
+              <p class="content-margin">
+                Enterprise Application Development & Consultancy
+              </p>
+              <p class="content-margin">
+                Restful API Development
+              </p>
+              <p class="content-margin">
+                Rapid Prototyping
+              </p>
+              <p class="content-margin">
+                Test, Build, Deploy Automation (AWS)
+              </p>
+              <p class="content-margin">
+                Large Dataset Processing, Analysis and Reporting
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 lets-do-footer">
+        <div class="container">
+          <div class="row">
+            <img src="./00_dynobjx_logo_header.png" class="dynamic-image pull-left header-padding">
+            <div class="pull-right">
+              <p></p>
+              <p class="dynamic-text address">
+                3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+                Ortigas Center, Pasig City<br>
+                Philippines 1605<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT US -->
+    <div class="col-sm-12 no-padding page about image-height" id="about">
+      <div class="content-height bg-black">
+        <div class="col-sm-6 no-padding content-height about about-image hidden-xs">
+          <div class="triangle-left" onclick="goToService();"></div>
+          <div class="mid-left" onclick="goToService();"></div>
+          <div class="triangle-right" onclick="goToService();"></div>
+          <div class="mid-right" onclick="goToService();"></div>
+        </div>
+        <div class="col-sm-6 about text-body content-height about-xs">
+          <div class="hidden-xs">
+            <div class="col-sm-12">
+              <div class="pull-right header-padding">
+                <input type="button" class="btn contact-btn about dynamic-text" value="Contact us">
+              </div>  
+            </div>
+            <div class="dynamic-text col-sm-offset-1 col-sm-10" id="third">
+              <h1 class="title-text about content-margin">ABOUT US</h1>
+              <br><br>
+              <div class="text-color about">
+                <p class="content-margin">
+                  Based in Manila, Philippines, Dynamic Objx Labs Inc. is a software development company specializing in Web and Mobile Applications utilizing cutting-edge technologies to create software products based on the highest and utmost software engineering standards and software that provide the best user-experience. Our aim is to create beautiful software: dynamic, efficient and scalable code and dynamic, simple and engaging user interface.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="visible-xs content-height with-scroll">
+          <div class="col-xs-12">
+            <div class="pull-right header-padding">
+              <input type="button" class="btn contact-btn about dynamic-text" value="Contact us">
+            </div>  
+          </div>
+          <div class="dynamic-text col-xs-10 col-xs-offset-1">
+            <h1 class="title-text about content-margin" id="third-xs">ABOUT US</h1>
+            <br class="hidden-xs"><br>
+            <div class="text-color about">
+              <p class="content-margin">
+                Based in Manila, Philippines, Dynamic Objx Labs Inc. is a software development company specializing in Web and Mobile Applications utilizing cutting-edge technologies to create software products based on the highest and utmost software engineering standards and software that provide the best user-experience. Our aim is to create beautiful software: dynamic, efficient and scalable code and dynamic, simple and engaging user interface.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 lets-do-footer">
+        <div class="container">
+          <div class="row">
+            <img src="./00_dynobjx_logo_header.png" class="dynamic-image pull-left header-padding">
+            <div class="pull-right">
+              <p></p>
+              <p class="dynamic-text address">
+                3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+                Ortigas Center, Pasig City<br>
+                Philippines 1605<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SERVICES -->
+    <div class="col-sm-12 no-padding page services image-height" id="service">
+      <div class="content-height bg-black">
+        <div class="col-sm-6 no-padding content-height services services-image hidden-xs">
+          <div class="col-sm-12 no-padding blue-back"></div>
+          <img src="./04_Logos.png" class="logo">
+          <div class="triangle-left" onclick="goToBlog();"></div>
+          <div class="mid-left" onclick="goToBlog();"></div>
+          <div class="triangle-right" onclick="goToBlog();"></div>
+          <div class="mid-right" onclick="goToBlog();"></div>
+        </div>
+        <div class="col-sm-6 services text-body content-height services-xs">
+          <div class="hidden-xs">
+            <div class="col-sm-12">
+              <div class="pull-right header-padding">
+                <input type="button" class="btn contact-btn services dynamic-text" value="Contact us">
+              </div>  
+            </div>
+            <div class="dynamic-text col-sm-offset-1 col-sm-10" id="fourth">
+              <h1 class="title-text services content-margin">SERVICES</h1>
+              <br><br>
+              <div class="text-color services">
+                <p class="content-margin">
+                  We offer Software Development Outsourcing services, Custom software development and Product Development for the web and mobile devices specializing in Web and Mobile software development: Java, Rails, Android SDK and IOS.
+                </p>
+                <p class="content-margin">
+                  The development team is composed of people who's worked with Philippines-based companies such as a top broadcasting and media company, private and public banking companies, an international insurance firm, a Danish medical services company and top US-based companies that are leaders in the online job market and internet media industries.
+                </p>
+              </div>
+            </div>
+            <div class="download">
+              <input type="button" class="pull-right btn download-btn services dynamic-text" value="Download our portfolio">
+            </div>
+          </div>
+        </div>
+        <div class="visible-xs content-height with-scroll">
+          <div class="col-xs-12">
+            <div class="pull-right header-padding">
+              <input type="button" class="btn contact-btn services dynamic-text" value="Contact us">
+            </div>  
+          </div>
+          <div class="dynamic-text col-xs-10 col-xs-offset-1">
+            <h1 class="title-text services content-margin" id="fourth-xs">SERVICES</h1>
+            <br class="hidden-xs"><br>
+            <div class="text-color services">
+              <p class="content-margin">
+                We offer Software Development Outsourcing services, Custom software development and Product Development for the web and mobile devices specializing in Web and Mobile software development: Java, Rails, Android SDK and IOS.
+              </p>
+              <p class="content-margin">
+                The development team is composed of people who's worked with Philippines-based companies such as a top broadcasting and media company, private and public banking companies, an international insurance firm, a Danish medical services company and top US-based companies that are leaders in the online job market and internet media industries.
+              </p>
+            </div>
+          </div>
+          <div class="download">
+            <input type="button" class="pull-right btn download-btn services dynamic-text" value="Download our portfolio">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 lets-do-footer">
+        <div class="container">
+          <div class="row">
+            <img src="./00_dynobjx_logo_header.png" class="dynamic-image pull-left header-padding">
+            <div class="pull-right">
+              <p></p>
+              <p class="dynamic-text address">
+                3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+                Ortigas Center, Pasig City<br>
+                Philippines 1605<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BLOG -->
+    <div class="col-sm-12 no-padding page blog image-height" id="blog">
+      <div class="content-height bg-black">
+        <div class="col-sm-6 no-padding content-height blog blog-image hidden-xs">
+          <div class="triangle-left" onclick="goToContact();"></div>
+          <div class="mid-left" onclick="goToContact();"></div>
+          <div class="triangle-right" onclick="goToContact();"></div>
+          <div class="mid-right" onclick="goToContact();"></div>
+        </div>
+        <div class="col-sm-6 blog text-body content-height blog-xs">
+          <div class="hidden-xs">
+            <div class="col-sm-12">
+              <div class="pull-right header-padding">
+                <input type="button" class="btn contact-btn blog dynamic-text" value="Contact us">
+              </div>  
+            </div>
+            <div class="dynamic-text col-sm-offset-1 col-sm-10" id="fifth">
+              <h1 class="title-text blog content-margin">BLOG</h1>
+              <br>
+              <div class="text-color blog">
+                <p class="blog-title">
+                  Play Framework Cookbook: Second Edition is now out!<br>
+                </p>
+                <span>Posted on August 31, 2015</span>
+                <br><br>
+                <p class="content-margin blog">
+                  Play Framework Cookbook Second Edition Over 60 hands-on recipes to create dynamic and reactive web-based applications with Play 2 About This Book Create and build modern web applications using Play 2.x Learn how to integrate Play 2.x with databases, third party modules, Restful APIs, and more Explore various features and optimizations added to Play 2.x using practical example-oriented scenarios Who This Book Is For This book is aimed at advanced developers who are looking to harness the power...
+                </p>
+              </div>
+            </div>
+            <div class="download">
+              <input type="button" class="pull-right btn blog read-more dynamic-text" value="Read More">
+            </div>
+          </div>
+        </div>
+        <div class="visible-xs content-height with-scroll">
+          <div class="col-xs-12">
+            <div class="pull-right header-padding">
+              <input type="button" class="btn contact-btn blog dynamic-text" value="Contact us">
+            </div>  
+          </div>
+          <div class="dynamic-text col-xs-10 col-xs-offset-1">
+            <h1 class="title-text blog content-margin" id="fifth-xs">BLOG</h1>
+            <br>
+            <div class="text-color blog">
+              <p class="blog-title">
+                Play Framework Cookbook: Second Edition is now out!<br>
+              </p>
+              <span>Posted on August 31, 2015</span>
+              <br><br>
+              <p class="content-margin blog">
+                Play Framework Cookbook Second Edition Over 60 hands-on recipes to create dynamic and reactive web-based applications with Play 2 About This Book Create and build modern web applications using Play 2.x Learn how to integrate Play 2.x with databases, third party modules, Restful APIs, and more Explore various features and optimizations added to Play 2.x using practical example-oriented scenarios Who This Book Is For This book is aimed at advanced developers who are looking to harness the power...
+              </p>
+            </div>
+          </div>
+          <div class="download">
+            <input type="button" class="pull-right btn blog read-more dynamic-text" value="Read More">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 lets-do-footer">
+        <div class="container">
+          <div class="row">
+            <img src="./00_dynobjx_logo_header.png" class="dynamic-image pull-left header-padding">
+            <div class="pull-right">
+              <p></p>
+              <p class="dynamic-text address">
+                3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+                Ortigas Center, Pasig City<br>
+                Philippines 1605<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT -->
+    <div class="col-sm-12 no-padding page contact image-height" id="contact">
+      <div class="content-height bg-black">
+        <div class="col-sm-6 no-padding content-height contact contact-image hidden-xs" id="mapid">
+        </div>
+        <div class="col-sm-6 contact text-body content-height contact-xs">
+          <div class="hidden-xs">
+            <div class="dynamic-text col-sm-offset-1 col-sm-10" id="sixth">
+              <br><br><br><br><br>
+              <h1 class="title-text contact content-margin">CONTACT US</h1>
+              <br>
+              <h3 class="contact-us">
+                3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+                Ortigas Center, Pasig City<br>
+                Philippines 1605<br>
+              </h3>
+              <h3 class="contact-us tel-no">
+                +63.2.621.5342 (PH)<br>
+                +63.947.893.7579 (PH)<br>
+                +1.415.799.7342 (US)
+              </h3>
+              <div class="tel-no">
+                <input type="button" class="btn contact-btn send-us dynamic-text" value="Send us an email">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="visible-xs content-height with-scroll">
+          <div class="dynamic-text col-xs-offset-1 col-xs-10" id="sixth-xs">
+            <br class="hidden-xs"><br class="hidden-xs"><br><br><br>
+            <h1 class="title-text contact content-margin">CONTACT US</h1>
+            <br>
+            <h3 class="contact-us">
+              3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+              Ortigas Center, Pasig City<br>
+              Philippines 1605<br>
+            </h3>
+            <h3 class="contact-us tel-no">
+              +63.2.621.5342 (PH)<br>
+              +63.947.893.7579 (PH)<br>
+              +1.415.799.7342 (US)
+            </h3>
+            <div class="tel-no">
+              <input type="button" class="btn contact-btn send-us dynamic-text" value="Send us an email">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="triangle-left hidden-xs" onclick="goToWe();"></div>
+      <div class="contact-left hidden-xs" onclick="goToWe();"></div>
+      <div class="triangle-right hidden-xs" onclick="goToWe();"></div>
+      <div class="contact-right hidden-xs" onclick="goToWe();"></div>
+      <div class="col-sm-12 lets-do-footer">
+        <div class="container">
+          <div class="row">
+            <img src="./00_dynobjx_logo_header.png" class="dynamic-image pull-left header-padding">
+            <div class="pull-right">
+              <p></p>
+              <p class="dynamic-text address">
+                3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+                Ortigas Center, Pasig City<br>
+                Philippines 1605<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
