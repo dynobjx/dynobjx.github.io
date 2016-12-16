@@ -214,7 +214,7 @@
 }
 
 .first-image {
-    background-image: url('01_Initial Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/01_Initial%20Image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -352,7 +352,7 @@
 
 /* LET'S DO SOFTWARE */
 .lets-do-image {
-    background-image: url('02_Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/02_Image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -432,7 +432,7 @@
 
 /* ABOUT */
 .about-image {
-    background-image: url('03_Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/03_Image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -553,7 +553,7 @@
 }
 
 .services-image {
-    background-image: url('04_Image_no_blue.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/04_Image_no_blue.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -574,7 +574,7 @@
 
 /* BLOG */
 .blog-image {
-    background-image: url('05_Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/05_Image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -877,7 +877,7 @@
     }
 
     .we-dyn {
-        background-image: url('01_Initial Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/01_Initial%20Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -887,7 +887,7 @@
     }
 
     .lets-xs {
-        background-image: url('02_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/02_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -895,7 +895,7 @@
     }
 
     .about-xs {
-        background-image: url('03_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/03_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -903,7 +903,7 @@
     }
 
     .services-xs {
-        background-image: url('04_Image_no_blue.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/04_Image_no_blue.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -911,7 +911,7 @@
     }
 
     .blog-xs {
-        background-image: url('05_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/05_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -919,7 +919,7 @@
     }
 
     .contact-xs {
-        background-image: url('06_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/06_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
