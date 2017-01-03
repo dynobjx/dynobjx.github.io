@@ -23,8 +23,12 @@
           navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) ||
           navigator.userAgent.match(/Windows Phone/i)){
           $('.lets-do-footer > .container').addClass('footer-mobile');
+          $('#we-left').addClass('first-page');
+          $('#we-right').addClass('first-page');
         } else {
           $('.lets-do-footer > .container').addClass('footer-desktop');
+          $('#we-left').addClass('image-height');
+          $('#we-right').addClass('image-height');
         }
       }
 
@@ -177,14 +181,14 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 no-padding bg-black first-page">
-      <div class="col-sm-6 no-padding first-page first-image hidden-xs">
+    <div class="col-sm-12 no-padding bg-black">
+      <div class="col-sm-6 no-padding first-image hidden-xs" id="we-left">
         <div class="triangle-left" onclick="goToLets();"></div>
         <div class="mid-left" onclick="goToLets();"></div>
         <div class="triangle-right" onclick="goToLets();"></div>
         <div class="mid-right" onclick="goToLets();"></div>
       </div>
-      <div class="col-sm-6 no-padding text-body first-page we-dyn">
+      <div class="col-sm-6 no-padding text-body we-dyn" id="we-right">
         <div class="hidden-xs">
           <div class="col-sm-10 col-sm-offset-1 dynamic-text we">
             <h2 class="dynamic-text title-text we">WE ARE DYNAMIC OBJX LABS INC.</h2>
