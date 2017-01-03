@@ -8,12 +8,28 @@
     <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css"/>
+    <meta name="description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/> 
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="blog"/> 
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/> 
+    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/> 
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://dynamicobjx.com/"/> 
+    <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/>
   </head>
-  <body onload="initMap(); goToWe();">
+  <body onload="detect(); initMap(); goToWe();">
     <script>
-      function initMap () {
-        var mymap = L.map('mapid').setView([14.587684, 121.0591433], 17);
+      function detect() {
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || 
+          navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) ||
+          navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) ||
+          navigator.userAgent.match(/Windows Phone/i)){
+          $('.lets-do-footer > .container').addClass('footer-mobile');
+        } else {
+          $('.lets-do-footer > .container').addClass('footer-desktop');
+        }
+      }
 
+      function initMap () {
+        var mymap = L.map('mapid', { zoomControl:false }).setView([14.587684, 121.0591433], 17);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -161,14 +177,14 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 no-padding bg-black">
-      <div class="col-sm-6 no-padding image-height first-image hidden-xs">
+    <div class="col-sm-12 no-padding bg-black first-page">
+      <div class="col-sm-6 no-padding first-page first-image hidden-xs">
         <div class="triangle-left" onclick="goToLets();"></div>
         <div class="mid-left" onclick="goToLets();"></div>
         <div class="triangle-right" onclick="goToLets();"></div>
         <div class="mid-right" onclick="goToLets();"></div>
       </div>
-      <div class="col-sm-6 no-padding text-body image-height we-dyn">
+      <div class="col-sm-6 no-padding text-body first-page we-dyn">
         <div class="hidden-xs">
           <div class="col-sm-10 col-sm-offset-1 dynamic-text we">
             <h2 class="dynamic-text title-text we">WE ARE DYNAMIC OBJX LABS INC.</h2>
