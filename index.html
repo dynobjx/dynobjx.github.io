@@ -7,7 +7,8 @@
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/29092b04f21f67877a3df0e1f3966566bbc0cbdd/main.css"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/00c09b7c9b1375ca8f243083fc7085983a843520/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/> 
     <meta prefix="og: http://ogp.me/ns#" property="og:type" content="blog"/> 
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/> 
@@ -17,6 +18,8 @@
   </head>
   <body onload="detect(); initMap(); goTo('#we');">
     <script>
+      var pages = [ '#we', '#lets', '#about', '#services', '#blog', '#contact' ];
+
       function detect() {
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || 
           navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) ||
@@ -64,30 +67,13 @@
       };
 
       function remove(cl) {
-        if (cl !== '#we-nav') { 
-          $('#we-nav').removeClass('active'); 
-        }
-        if (cl !== '#lets-nav') { 
-          $('#lets-nav').removeClass('active');
-          $('#lets-text').fadeOut(0); 
-        }
-        if (cl !== '#about-nav') { 
-          $('#about-nav').removeClass('active');
-          $('#about-text').fadeOut(0);
-        }
-        if (cl !== '#services-nav') {
-          $('#services-nav').removeClass('active');
-          $('#service-text').fadeOut(0);
-        }
-        if (cl !== '#blog-nav') {
-          $('#blog-nav').removeClass('active');
-          $('#blog-text').fadeOut(0);
-        }
-        if (cl !== '#contact-nav') {
-          $('#contact-nav').removeClass('active');
-          $('#contact-text').fadeOut(0);
-        }
-      };
+        pages.forEach(function(page) {
+          if (cl !== page + '-nav') {
+            $(page + '-nav').removeClass('active');
+            $(page + '-text').fadeOut(0);
+          }
+        });
+      }
 
       function isVisible($el) {
         var winTop = $(window).scrollTop();
@@ -106,7 +92,7 @@
           } else if (isVisible($("#third")) || isVisible($("#third-xs"))) {
             navigate('#about-nav', '#about-text');
           } else if (isVisible($("#fourth")) || isVisible($("#fourth-xs"))) {
-            navigate('#services-nav', '#service-text');
+            navigate('#services-nav', '#services-text');
           } else if (isVisible($("#fifth")) || isVisible($("#fifth-xs"))) {
             navigate('#blog-nav', '#blog-text');
           } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
@@ -126,7 +112,7 @@
         <span class="nav-text inactive" id="about-text">ABOUT US</span>
       </div>
       <div class="services diamond" onclick="goTo('#services');" id="services-nav">
-        <span class="nav-text inactive" id="service-text">SERVICES</span>
+        <span class="nav-text inactive" id="services-text">SERVICES</span>
       </div>
       <div class="blog diamond" onclick="goTo('#blog');" id="blog-nav">
         <span class="nav-text inactive" id="blog-text">BLOG</span>
