@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'kelson light';
-    src: url('Kelson Sans Light.otf');
+    src: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/Kelson%20Sans%20Light.otf');
 }
 @font-face {
     font-family: 'kelson';
-    src: url('Kelson Sans Bold.otf');
+    src: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/Kelson%20Sans%20Bold.otf');
     font-weight: bold;
 }
 @font-face {
     font-family: 'kelson';
-    src: url('Kelson Sans Regular.otf');
+    src: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/Kelson%20Sans%20Regular.otf');
 }
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -268,7 +268,7 @@
 }
 /* ABOUT */
 .about-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/03_Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/03_Image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -330,7 +330,7 @@
     right: 15px;
 }
 .services-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/04_Image_no_blue.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/04_Image_no_blue.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -348,7 +348,7 @@
 }
 /* BLOG */
 .blog-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/05_Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/05_Image.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -546,28 +546,28 @@
         opacity: 0.8;
     }
     .about-xs {
-        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/03_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/03_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
         opacity: 0.3;
     }
     .services-xs {
-        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/04_Image_no_blue.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/04_Image_no_blue.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
         opacity: 0.3;
     }
     .blog-xs {
-        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/05_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/05_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
         opacity: 0.3;
     }
     .contact-xs {
-        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/27dd791fdb2dec6d53c0499a74db867d89ba3800/06_Image.png');
+        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/06_Image.png');
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
