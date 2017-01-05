@@ -15,7 +15,7 @@
     <meta prefix="og: http://ogp.me/ns#" property="og:url" content="http://dynamicobjx.com/"/> 
     <meta prefix="og: http://ogp.me/ns#" property="og:site_name" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/>
   </head>
-  <body onload="detect(); initMap(); goToWe();">
+  <body onload="detect(); initMap(); goTo('#we');">
     <script>
       function detect() {
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || 
@@ -43,42 +43,13 @@
         marker.bindPopup("<b>Dynamic Objx Labs Inc.</b>").openPopup();
       };
 
-      function goToLets () {
-        $('html,body').animate({
-          scrollTop: $("#lets").offset().top},
-          'slow');
+      function goTo (selector) {
+        if (selector === 'we') {
+          navigate('we-nav');
+        }
+        $('html,body').animate({ scrollTop: $(selector).offset().top }, 1000);
       };
 
-      function goToAbout () {
-        $('html,body').animate({
-          scrollTop: $("#about").offset().top},
-          'slow');
-      };
-
-      function goToService () {
-        $('html,body').animate({
-          scrollTop: $("#service").offset().top},
-          'slow');
-      };
-
-      function goToBlog () {
-        $('html,body').animate({
-          scrollTop: $("#blog").offset().top},
-          'slow');
-      };
-
-      function goToContact () {
-        $('html,body').animate({
-          scrollTop: $("#contact").offset().top},
-          'slow');
-      };
-
-      function goToWe () {
-        navigate('we-nav', 'we-text');
-        $('html,body').animate({
-          scrollTop: $("#we").offset().top},
-          'slow');
-      };
 
       function navigate(nav, text) {
         if (!$('#' + nav).hasClass('active')) {
@@ -149,20 +120,20 @@
 
     <div class="vertical-contact" id="verticalContact"></div>
     <div class="vertical-line">
-      <div class="we diamond" onclick="goToWe();" id="we-nav"></div>
-      <div class="lets diamond" onclick="goToLets();" id="lets-nav">
+      <div class="we diamond" onclick="goTo('#we');" id="we-nav"></div>
+      <div class="lets diamond" onclick="goTo('#lets');" id="lets-nav">
         <span class="nav-text inactive" id="lets-text">LET'S DO SOFTWARE TOGETHER</span>
       </div>
-      <div class="about diamond" onclick="goToAbout();" id="about-nav">
+      <div class="about diamond" onclick="goTo('#about');" id="about-nav">
         <span class="nav-text inactive" id="about-text">ABOUT US</span>
       </div>
-      <div class="services diamond" onclick="goToService();" id="services-nav">
+      <div class="services diamond" onclick="goTo('#services');" id="services-nav">
         <span class="nav-text inactive" id="service-text">SERVICES</span>
       </div>
-      <div class="blog diamond" onclick="goToBlog();" id="blog-nav">
+      <div class="blog diamond" onclick="goTo('#blog');" id="blog-nav">
         <span class="nav-text inactive" id="blog-text">BLOG</span>
       </div>
-      <div class="contact diamond" onclick="goToContact();" id="contact-nav">
+      <div class="contact diamond" onclick="goTo('#contact');" id="contact-nav">
         <span class="nav-text inactive" id="contact-text">CONTACT US</span>
       </div>
     </div>
@@ -180,10 +151,10 @@
     </div>
     <div class="col-sm-12 no-padding bg-black">
       <div class="col-sm-6 no-padding first-image hidden-xs" id="we-left">
-        <div class="triangle-left" onclick="goToLets();"></div>
-        <div class="mid-left" onclick="goToLets();"></div>
-        <div class="triangle-right" onclick="goToLets();"></div>
-        <div class="mid-right" onclick="goToLets();"></div>
+        <div class="triangle-left" onclick="goTo('#lets');"></div>
+        <div class="mid-left" onclick="goTo('#lets');"></div>
+        <div class="triangle-right" onclick="goTo('#lets');"></div>
+        <div class="mid-right" onclick="goTo('#lets');"></div>
       </div>
       <div class="col-sm-6 no-padding text-body we-dyn" id="we-right">
         <div class="hidden-xs">
@@ -233,10 +204,10 @@
       <div class="content-height bg-black">
         <div class="col-sm-6 no-padding content-height lets-do-image hidden-xs">
           <div class="cursor">          
-            <div class="triangle-left" onclick="goToAbout();"></div>
-            <div class="mid-left" onclick="goToAbout();"></div>
-            <div class="triangle-right" onclick="goToAbout();"></div>
-            <div class="mid-right" onclick="goToAbout();"></div>
+            <div class="triangle-left" onclick="goTo('#about');"></div>
+            <div class="mid-left" onclick="goTo('#about');"></div>
+            <div class="triangle-right" onclick="goTo('#about');"></div>
+            <div class="mid-right" onclick="goTo('#about');"></div>
           </div>
         </div>
         <div class="col-sm-6 second text-body content-height lets-xs">
@@ -330,10 +301,10 @@
     <div class="col-sm-12 no-padding page about image-height" id="about">
       <div class="content-height bg-black">
         <div class="col-sm-6 no-padding content-height about about-image hidden-xs">
-          <div class="triangle-left" onclick="goToService();"></div>
-          <div class="mid-left" onclick="goToService();"></div>
-          <div class="triangle-right" onclick="goToService();"></div>
-          <div class="mid-right" onclick="goToService();"></div>
+          <div class="triangle-left" onclick="goTo('#services');"></div>
+          <div class="mid-left" onclick="goTo('#services');"></div>
+          <div class="triangle-right" onclick="goTo('#services');"></div>
+          <div class="mid-right" onclick="goTo('#services');"></div>
         </div>
         <div class="col-sm-6 about text-body content-height about-xs">
           <div class="hidden-xs">
@@ -387,14 +358,14 @@
       </div>
     </div>
     <!-- SERVICES -->
-    <div class="col-sm-12 no-padding page services image-height" id="service">
+    <div class="col-sm-12 no-padding page services image-height" id="services">
       <div class="content-height bg-black">
         <div class="col-sm-6 no-padding content-height services services-image hidden-xs">
           <div class="col-sm-12 no-padding blue-back"></div>
-          <div class="triangle-left" onclick="goToBlog();"></div>
-          <div class="mid-left" onclick="goToBlog();"></div>
-          <div class="triangle-right" onclick="goToBlog();"></div>
-          <div class="mid-right" onclick="goToBlog();"></div>
+          <div class="triangle-left" onclick="goTo('#blog');"></div>
+          <div class="mid-left" onclick="goTo('#blog');"></div>
+          <div class="triangle-right" onclick="goTo('#blog');"></div>
+          <div class="mid-right" onclick="goTo('#blog');"></div>
         </div>
         <div class="col-sm-6 services text-body content-height services-xs">
           <div class="hidden-xs">
@@ -463,10 +434,10 @@
     <div class="col-sm-12 no-padding page blog image-height" id="blog">
       <div class="content-height bg-black">
         <div class="col-sm-6 no-padding content-height blog blog-image hidden-xs">
-          <div class="triangle-left" onclick="goToContact();"></div>
-          <div class="mid-left" onclick="goToContact();"></div>
-          <div class="triangle-right" onclick="goToContact();"></div>
-          <div class="mid-right" onclick="goToContact();"></div>
+          <div class="triangle-left" onclick="goTo('#contact');"></div>
+          <div class="mid-left" onclick="goTo('#contact');"></div>
+          <div class="triangle-right" onclick="goTo('#contact');"></div>
+          <div class="mid-right" onclick="goTo('#contact');"></div>
         </div>
         <div class="col-sm-6 blog text-body content-height blog-xs">
           <div class="hidden-xs">
@@ -583,10 +554,10 @@
           </div>
         </div>
       </div>
-      <div class="triangle-left hidden-xs" onclick="goToWe();"></div>
-      <div class="contact-left hidden-xs" onclick="goToWe();"></div>
-      <div class="triangle-right hidden-xs" onclick="goToWe();"></div>
-      <div class="contact-right hidden-xs" onclick="goToWe();"></div>
+      <div class="triangle-left hidden-xs" onclick="goTo('#we');"></div>
+      <div class="contact-left hidden-xs" onclick="goTo('#we');"></div>
+      <div class="triangle-right hidden-xs" onclick="goTo('#we');"></div>
+      <div class="contact-right hidden-xs" onclick="goTo('#we');"></div>
       <div class="col-sm-12 lets-do-footer">
         <div class="container">
           <div class="row">
