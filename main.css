@@ -60,11 +60,12 @@
     border: 17px solid transparent;
     border-top-color: white;
 }
+.logo-margin { margin-top: 20px; }
+.h1-text { font-size: 36px; }
 .lets.diamond { top: 29%; }
 .about.diamond { top: 35%; }
 .services.diamond { top: 41%; }
-.blog.diamond { top: 47%; }
-.contact.diamond { top: 53%; }
+.contact.diamond { top: 47%; }
 .we.diamond.active { border-bottom-color: #5486AD; }
 .we.diamond.active:after { border-top-color: #5486AD; }
 .lets.diamond.active { border-bottom-color: #9EFFBC; }
@@ -73,8 +74,6 @@
 .about.diamond.active:after { border-top-color: #ECD476; }
 .services.diamond.active { border-bottom-color: #8FF1FA; }
 .services.diamond.active:after { border-top-color: #8FF1FA; }
-.blog.diamond.active { border-bottom-color: #01CCFF; }
-.blog.diamond.active:after { border-top-color: #01CCFF; }
 .contact.diamond.active { border-bottom-color: #BAD843; }
 .contact.diamond.active:after { border-top-color: #BAD843; }
 .cursor { cursor: pointer; }
@@ -97,11 +96,6 @@
 .services > .nav-text {
     color: #8FF1FA;
     font-size: 22px;
-}
-.blog.diamond > .nav-text {
-    color: #01CCFF;
-    font-size: 22px;
-    margin-top: 3px;
 }
 .contact > .nav-text {
     color: #BAD843;
@@ -134,7 +128,10 @@
     padding: 15px 0px;
 }
 .dynamic-text { font-family: signika; }
-.dynamic-image { height: 35px; }
+.dynamic-image { 
+    height: 35px; 
+    z-index: 2;
+}
 .contact-btn {
     font-size: 19px;
     color: #7796AF;
@@ -337,56 +334,6 @@
     width: 100%;
     position: absolute;
 }
-/* BLOG */
-.blog-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/05_Image.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.blog.text-body { background-color: #332D2D; }
-.blog.title-text { color: #00CCFF; }
-.blog.contact-btn {
-    background-color: #332D2D;
-    color: white;
-    border-color: white;
-}
-.blog.contact-btn:hover {
-    background-color: white;
-    color: #332D2D;
-    border-color: #252020;
-}
-.blog > .blog-title, .blog > span { color: #A4E391; }
-.blog > span {
-    font-size: 12px;
-    position: absolute;
-    margin-top: -13px;
-}
-.blog.text-color { color: #F7F6F6; }
-.content-margin.blog, .about > .content-margin { line-height: 28px; }
-.read-more {
-    font-size: 19px;
-    color: #A7E794;
-    border-radius: 0px;
-    border: 3px solid #A7E794;
-    background-color: #332D2D;
-    padding: 3px 10px 0px;
-    position: relative;
-    margin-bottom: 30px;
-}
-.read-more:hover {
-    background-color: #A7E794;
-    color: #332D2D;
-    border-color: #47753A;
-}
-.read-more:focus {
-    border: 3px solid #A7E794;
-    background-color: #332D2D;
-    color: #A7E794;
-}
-.blog > div .triangle-left { border-right: 45px solid #01CCFF; }
-.blog > div .mid-left { background: #332D2D; }
-.blog > div .triangle-right { border-left: 45px solid #01CCFF; }
-.blog > div .mid-right { background: #332D2D; }
 /* CONTACT US */
 #mapid { z-index: 1; }
 .contact.text-body { background-color: #2A2B12; }
@@ -451,10 +398,26 @@
     cursor: pointer;
     z-index: 2;
 }
+.send-us > a:hover { color: #2A2B12; }
+.send-us > a {
+    text-decoration: none;
+    color: white;
+}
+.facebook-icon {    
+    width: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.contact-footer {
+    z-index: 2;
+    padding-left: 0px;
+}
+.contact-footer-image { padding-left: 15px; }
+.redirect-fb { display: -webkit-inline-box; }
+.facebook-link { display: inline; }
 @media (min-width: 401px) and (max-width: 736px) {
     .title-text { margin-top: 20px !important; }
     .we.text-color,
-    .blog.text-color,
     .second-text.text-color,
     .about.text-color,
     .services.text-color,
@@ -466,13 +429,11 @@
     .second-title.title-text,
     .about.title-text,
     .services.title-text,
-    .blog.title-text,
     .contact.title-text { font-size: 30px !important; }
 }
 @media (max-width: 400px) {
     .title-text { margin-top: 20px !important; }
     .we.text-color,
-    .blog.text-color,
     .second-text.text-color,
     .about.text-color,
     .services.text-color,
@@ -484,11 +445,9 @@
     .second-title.title-text,
     .about.title-text,
     .services.title-text,
-    .blog.title-text,
     .contact.title-text { font-size: 24px !important; }
     .content-margin { margin-bottom: 20px; }
     .header-padding { padding-bottom: 0px; }
-    .content-margin.blog { line-height: 20px; }
 }
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
@@ -514,8 +473,7 @@
     .lets.diamond { top: 30%; }
     .about.diamond { top: 37%; }
     .services.diamond { top: 44%; }
-    .blog.diamond { top: 51%; }
-    .contact.diamond { top: 58%; }
+    .contact.diamond { top: 51%; }
     .title-text { margin-top: 80px; }
     .bg-black { background: black; }
     .we.text-color { color: white; }
@@ -550,13 +508,6 @@
         position: absolute;
         opacity: 0.3;
     }
-    .blog-xs {
-        background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/05_Image.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        opacity: 0.3;
-    }
     .contact-xs {
         background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/06_Image.png');
         background-repeat: no-repeat;
@@ -566,7 +517,10 @@
     }
     .content-height { width: 100%; }
     .navbar > .container { height: 50px; }
-    .dynamic-image { height: 20px; }
+    .dynamic-image { 
+        height: 20px;
+        z-index: 2;
+    }
     .dynamic-text.address { font-size: 12px; }
 }
 @media (max-width: 900px) {
@@ -574,14 +528,12 @@
 }
 @media (min-width: 768px) and (max-width: 1100px) {
     .we.text-color,
-    .blog.text-color,
     .second-text.text-color,
     .about.text-color,
     .services.text-color { font-size: 16px !important; }
     .second-title.title-text,
     .about.title-text,
     .services.title-text,
-    .blog.title-text { font-size: 30px; }
     .contact-us { font-size: 20px; }
     .contact.title-text { font-size: 30px; }
     .logo { padding: 27% 18%; }

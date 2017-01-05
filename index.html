@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX</title>
+    <link rel="shortcut icon" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/64cd5aee7a45fad5de666ac8be76ce88ace8967d/00_dynobjx_logo_header.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/00c09b7c9b1375ca8f243083fc7085983a843520/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/d9684620928679b69eef4bf93d9163764c9c3f85/main.css"/>
     <meta name="description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/> 
     <meta prefix="og: http://ogp.me/ns#" property="og:type" content="blog"/> 
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/> 
@@ -21,6 +22,7 @@
       var pages = [ '#we', '#lets', '#about', '#services', '#blog', '#contact' ];
 
       function detect() {
+        $('#verticalContact').fadeOut(10);
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || 
           navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) ||
           navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) ||
@@ -39,8 +41,8 @@
                     scrollWheelZoom: true,
                     maxZoom: 19,
                     zoomControl:false
-                  }).setView([14.587684, 121.0591433], 17);
-        var marker = L.marker([14.587684, 121.0591433]).addTo(mymap);
+                  }).setView([14.5881071, 121.0614795], 17);
+        var marker = L.marker([14.5881071, 121.0614795]).addTo(mymap);
         marker.bindPopup("<b>Dynamic Objx Labs Inc.</b>").openPopup();
       };
 
@@ -93,8 +95,6 @@
             navigate('#about-nav', '#about-text');
           } else if (isVisible($("#fourth")) || isVisible($("#fourth-xs"))) {
             navigate('#services-nav', '#services-text');
-          } else if (isVisible($("#fifth")) || isVisible($("#fifth-xs"))) {
-            navigate('#blog-nav', '#blog-text');
           } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
             navigate('#contact-nav', '#contact-text');
           }
@@ -114,16 +114,13 @@
       <div class="services diamond" onclick="goTo('#services');" id="services-nav">
         <span class="nav-text inactive" id="services-text">SERVICES</span>
       </div>
-      <div class="blog diamond" onclick="goTo('#blog');" id="blog-nav">
-        <span class="nav-text inactive" id="blog-text">BLOG</span>
-      </div>
       <div class="contact diamond" onclick="goTo('#contact');" id="contact-nav">
         <span class="nav-text inactive" id="contact-text">CONTACT US</span>
       </div>
     </div>
     <div class="navbar navbar-static-top header-shadow no-margin" id="we">
       <div class="container flex flex-row flex-center">
-          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image">
+          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
         <div class="flex-fit">
           <input type="button" class="btn contact-btn dynamic-text pull-right" value="Contact us">
         </div>
@@ -139,7 +136,7 @@
       <div class="col-sm-6 no-padding text-body we-dyn" id="we-right">
         <div class="hidden-xs">
           <div class="col-sm-10 col-sm-offset-1 dynamic-text we">
-            <h2 class="dynamic-text title-text we">WE ARE DYNAMIC OBJX LABS INC.</h2>
+            <h1 class="dynamic-text title-text we">WE ARE DYNAMIC OBJX LABS INC.</h1>
             <br><br>
             <div class="text-color we" id="first">
               <p class="content-margin">
@@ -233,7 +230,9 @@
             </div>
           </div>
           <div class="dynamic-text col-xs-10 col-xs-offset-1">
-            <h1 class="title-text second-title content-margin" id="second-xs">LET'S DO SOFTWARE TOGETHER</h1>
+            <span class="h1-text title-text second-title content-margin" id="second-xs">LET'S DO SOFTWARE TOGETHER</span>
+            <br>
+            <br>
             <br class="hidden-xs"><br>
             <div class="text-color second-text">
               <p class="content-margin">
@@ -263,7 +262,7 @@
       </div>
       <div class="col-sm-12">
         <div class="lets-do-footer flex flex-row flex-center">
-          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image">
+          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
           <div class="flex-fit">
             <p class="pull-right dynamic-text address">
               3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
@@ -291,7 +290,8 @@
               </div>
             </div>
             <div class="dynamic-text col-sm-offset-1 col-sm-10" id="third">
-              <h1 class="title-text about content-margin">ABOUT US</h1>
+              <span class="h1-text title-text about content-margin">ABOUT US</span>
+              <br><br>
               <br><br>
               <div class="text-color about">
                 <p class="content-margin">
@@ -308,7 +308,9 @@
             </div>
           </div>
           <div class="dynamic-text col-xs-10 col-xs-offset-1">
-            <h1 class="title-text about content-margin" id="third-xs">ABOUT US</h1>
+            <span class="h1-text title-text about content-margin" id="third-xs">ABOUT US</span>
+            <br>
+            <br>
             <br class="hidden-xs"><br>
             <div class="text-color about">
               <p class="content-margin">
@@ -320,7 +322,7 @@
       </div>
       <div class="col-sm-12">
         <div class="lets-do-footer flex flex-row flex-center">
-          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image">
+          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
           <div class="flex-fit">
             <p class="pull-right dynamic-text address">
               3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
@@ -336,10 +338,10 @@
       <div class="content-height bg-black">
         <div class="col-sm-6 no-padding content-height services services-image hidden-xs">
           <div class="col-sm-12 no-padding blue-back"></div>
-          <div class="triangle-left" onclick="goTo('#blog');"></div>
-          <div class="mid-left" onclick="goTo('#blog');"></div>
-          <div class="triangle-right" onclick="goTo('#blog');"></div>
-          <div class="mid-right" onclick="goTo('#blog');"></div>
+          <div class="triangle-left" onclick="goTo('#contact');"></div>
+          <div class="mid-left" onclick="goTo('#contact');"></div>
+          <div class="triangle-right" onclick="goTo('#contact');"></div>
+          <div class="mid-right" onclick="goTo('#contact');"></div>
         </div>
         <div class="col-sm-6 services text-body content-height services-xs">
           <div class="hidden-xs">
@@ -349,7 +351,8 @@
               </div>
             </div>
             <div class="dynamic-text col-sm-offset-1 col-sm-10" id="fourth">
-              <h1 class="title-text services content-margin">SERVICES</h1>
+              <span class="h1-text title-text services content-margin">SERVICES</span>
+              <br><br>
               <br><br>
               <div class="text-color services">
                 <p class="content-margin">
@@ -360,9 +363,6 @@
                 </p>
               </div>
             </div>
-            <div class="download">
-              <input type="button" class="pull-right btn download-btn services dynamic-text" value="Download our portfolio">
-            </div>
           </div>
         </div>
         <div class="visible-xs content-height with-scroll">
@@ -372,7 +372,9 @@
             </div>
           </div>
           <div class="dynamic-text col-xs-10 col-xs-offset-1">
-            <h1 class="title-text services content-margin" id="fourth-xs">SERVICES</h1>
+            <span class="h1-text title-text services content-margin" id="fourth-xs">SERVICES</span>
+            <br>
+            <br>
             <br class="hidden-xs"><br>
             <div class="text-color services">
               <p class="content-margin">
@@ -383,87 +385,11 @@
               </p>
             </div>
           </div>
-          <div class="download">
-            <input type="button" class="pull-right btn download-btn services dynamic-text" value="Download our portfolio">
-          </div>
         </div>
       </div>
       <div class="col-sm-12">
         <div class="lets-do-footer flex flex-row flex-center">
-          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image">
-          <div class="flex-fit">
-            <p class="pull-right dynamic-text address">
-              3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
-              Ortigas Center, Pasig City<br>
-              Philippines 1605<br>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- BLOG -->
-    <div class="col-sm-12 no-padding page blog image-height" id="blog">
-      <div class="content-height bg-black">
-        <div class="col-sm-6 no-padding content-height blog blog-image hidden-xs">
-          <div class="triangle-left" onclick="goTo('#contact');"></div>
-          <div class="mid-left" onclick="goTo('#contact');"></div>
-          <div class="triangle-right" onclick="goTo('#contact');"></div>
-          <div class="mid-right" onclick="goTo('#contact');"></div>
-        </div>
-        <div class="col-sm-6 blog text-body content-height blog-xs">
-          <div class="hidden-xs">
-            <div class="col-sm-12">
-              <div class="pull-right header-padding">
-                <input type="button" class="btn contact-btn blog dynamic-text" value="Contact us">
-              </div>
-            </div>
-            <div class="dynamic-text col-sm-offset-1 col-sm-10" id="fifth">
-              <h1 class="title-text blog content-margin">BLOG</h1>
-              <br>
-              <div class="text-color blog">
-                <p class="blog-title">
-                  Play Framework Cookbook: Second Edition is now out!<br>
-                </p>
-                <span>Posted on August 31, 2015</span>
-                <br><br>
-                <p class="content-margin blog">
-                  Play Framework Cookbook Second Edition Over 60 hands-on recipes to create dynamic and reactive web-based applications with Play 2 About This Book Create and build modern web applications using Play 2.x Learn how to integrate Play 2.x with databases, third party modules, Restful APIs, and more Explore various features and optimizations added to Play 2.x using practical example-oriented scenarios Who This Book Is For This book is aimed at advanced developers who are looking to harness the power...
-                </p>
-              </div>
-            </div>
-            <div class="download">
-              <input type="button" class="pull-right btn blog read-more dynamic-text" value="Read More">
-            </div>
-          </div>
-        </div>
-        <div class="visible-xs content-height with-scroll">
-          <div class="col-xs-12">
-            <div class="pull-right header-padding">
-              <input type="button" class="btn contact-btn blog dynamic-text" value="Contact us">
-            </div>
-          </div>
-          <div class="dynamic-text col-xs-10 col-xs-offset-1">
-            <h1 class="title-text blog content-margin" id="fifth-xs">BLOG</h1>
-            <br>
-            <div class="text-color blog">
-              <p class="blog-title">
-                Play Framework Cookbook: Second Edition is now out!<br>
-              </p>
-              <span>Posted on August 31, 2015</span>
-              <br><br>
-              <p class="content-margin blog">
-                Play Framework Cookbook Second Edition Over 60 hands-on recipes to create dynamic and reactive web-based applications with Play 2 About This Book Create and build modern web applications using Play 2.x Learn how to integrate Play 2.x with databases, third party modules, Restful APIs, and more Explore various features and optimizations added to Play 2.x using practical example-oriented scenarios Who This Book Is For This book is aimed at advanced developers who are looking to harness the power...
-              </p>
-            </div>
-          </div>
-          <div class="download">
-            <input type="button" class="pull-right btn blog read-more dynamic-text" value="Read More">
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12">
-        <div class="lets-do-footer flex flex-row flex-center">
-          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image">
+          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
           <div class="flex-fit">
             <p class="pull-right dynamic-text address">
               3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
@@ -483,7 +409,9 @@
           <div class="hidden-xs">
             <div class="dynamic-text col-sm-offset-1 col-sm-10" id="sixth">
               <br><br><br><br><br>
-              <h1 class="title-text contact content-margin">CONTACT US</h1>
+              <span class="h1-text title-text contact content-margin">CONTACT US</span>
+              <br>
+              <br>
               <br>
               <h3 class="contact-us">
                 3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
@@ -496,7 +424,13 @@
                 +1.415.799.7342 (US)
               </h3>
               <div class="tel-no">
-                <input type="button" class="btn contact-btn send-us dynamic-text" value="Send us an email">
+                <a target="_blank" href="https://www.facebook.com/dynamicobjxlabs/" class="redirect-fb">
+                  <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/aa91fafdbfad478b10bb45eb9e27f50964eed6e6/fb_50x50.png" class="facebook-icon" alt="Facebook icon">
+                </a>
+                <h3 class="contact-us no-margin facebook-link">&nbsp; /dynamicobjxlabs</h3><br><br>
+                <button class="btn contact-btn send-us dynamic-text">
+                  <a href="mailto:hello@dynamicobjx.com" class="">Send us an email</a>
+                </button>
               </div>
             </div>
           </div>
@@ -504,7 +438,9 @@
         <div class="visible-xs content-height with-scroll">
           <div class="dynamic-text col-xs-offset-1 col-xs-10" id="sixth-xs">
             <br class="hidden-xs"><br class="hidden-xs"><br><br><br>
-            <h1 class="title-text contact content-margin">CONTACT US</h1>
+            <span class="h1-text title-text contact content-margin">CONTACT US</span>
+            <br>
+            <br>
             <br>
             <h3 class="contact-us">
               3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
@@ -517,7 +453,13 @@
               +1.415.799.7342 (US)
             </h3>
             <div class="tel-no">
-              <input type="button" class="btn contact-btn send-us dynamic-text" value="Send us an email">
+              <a target="_blank" href="https://www.facebook.com/dynamicobjxlabs/" class="redirect-fb">
+                <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/aa91fafdbfad478b10bb45eb9e27f50964eed6e6/fb_50x50.png" class="facebook-icon" alt="Facebook icon">
+              </a>
+              <h3 class="contact-us no-margin facebook-link">&nbsp; /dynamicobjxlabs</h3><br><br>
+              <button class="btn contact-btn send-us dynamic-text">
+                <a href="mailto:hello@dynamicobjx.com" class="">Send us an email</a>
+              </button>
             </div>
           </div>
         </div>
@@ -526,9 +468,9 @@
       <div class="contact-left hidden-xs" onclick="goTo('#we');"></div>
       <div class="triangle-right hidden-xs" onclick="goTo('#we');"></div>
       <div class="contact-right hidden-xs" onclick="goTo('#we');"></div>
-      <div class="col-sm-12">
+      <div class="col-sm-12 contact-footer">
         <div class="lets-do-footer flex flex-row flex-center">
-          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image">
+          <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image contact-footer-image" alt="Dynamic Objx logo">
           <div class="flex-fit">
             <p class="pull-right dynamic-text address">
               3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
