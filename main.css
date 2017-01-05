@@ -25,6 +25,7 @@
     border-radius: 10px;
     background-color: #656565;
 }
+.navbar > .container { height: 10vh; }
 .vertical-line {
     border-left: 2px solid #FFFFFF;
     position: fixed;
@@ -133,7 +134,7 @@
     padding: 15px 0px;
 }
 .dynamic-text { font-family: signika; }
-.dynamic-image { position: relative; }
+.dynamic-image { height: 35px; }
 .contact-btn {
     font-size: 19px;
     color: #7796AF;
@@ -250,22 +251,12 @@
 .lets-do > div .mid-left { background: #332D21; }
 .lets-do > div .triangle-right { border-left: 45px solid #9EFFBC; }
 .lets-do > div .mid-right { background: #332D21; }
-.footer-mobile { padding-top: 2vh; }
-.footer-desktop {
-    height: inherit;
-    margin-top: -6px;
-}
 .lets-do-footer {
     background-color: white;
     height: 10vh;
     z-index: 2;
 }
-.dynamic-text.address { color: #A1A1A1; }
-.lets-do-footer > .container > .row > .header-padding { padding-top: 21px; }
-.lets-do-footer > .container {
-    width: 96%;
-    margin-left: 2%;
-}
+.dynamic-text.address { color: #A1A1A1; margin: 0px; }
 /* ABOUT */
 .about-image {
     background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/03_Image.png');
@@ -574,10 +565,9 @@
         opacity: 0.3;
     }
     .content-height { width: 100%; }
-    .dynamic-image { width: 130px; }
+    .navbar > .container { height: 50px; }
+    .dynamic-image { height: 20px; }
     .dynamic-text.address { font-size: 12px; }
-    .lets-do-footer > .container > .row { margin: 0px -30px; }
-    .lets-do-footer > .container > .row > img { padding: 7% 0px; }
 }
 @media (max-width: 900px) {
     .logo { padding: 37% 18% !important; }
@@ -599,3 +589,45 @@
 @media (min-width: 1200px) {
     .logo { padding: 20% 18%; }
 }
+
+/* FLEX */
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.flex.flex-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.flex.flex-wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.flex.flex-center {
+    -webkit-align-items: center;
+         -ms-flex-align: center;
+            align-items: center;
+}
+.flex > * {
+    -webkit-box-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+}
+
+.flex > .flex-fit {
+    -webkit-box-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                overflow: auto;
+}
+.flex > .flex-fit.no-scroll { overflow: visible; }
