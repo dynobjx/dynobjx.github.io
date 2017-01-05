@@ -128,7 +128,10 @@
     padding: 15px 0px;
 }
 .dynamic-text { font-family: signika; }
-.dynamic-image { height: 35px; }
+.dynamic-image { 
+    height: 35px; 
+    z-index: 2;
+}
 .contact-btn {
     font-size: 19px;
     color: #7796AF;
@@ -405,6 +408,11 @@
     margin-bottom: 10px;
     cursor: pointer;
 }
+.contact-footer {
+    z-index: 2;
+    padding-left: 0px;
+}
+.contact-footer-image { padding-left: 15px; }
 .redirect-fb { display: -webkit-inline-box; }
 .facebook-link { display: inline; }
 @media (min-width: 401px) and (max-width: 736px) {
@@ -509,7 +517,10 @@
     }
     .content-height { width: 100%; }
     .navbar > .container { height: 50px; }
-    .dynamic-image { height: 20px; }
+    .dynamic-image { 
+        height: 20px;
+        z-index: 2;
+    }
     .dynamic-text.address { font-size: 12px; }
 }
 @media (max-width: 900px) {
