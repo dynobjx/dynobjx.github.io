@@ -52,12 +52,12 @@
 
 
       function navigate(nav, text) {
-        if (!$('#' + nav).hasClass('active')) {
+        if (!$(nav).hasClass('active')) {
           remove(nav);
-          $('#' + nav).addClass('active');
-          $('#' + text).fadeIn(180);
-          $('#' + text).removeClass('inactive');
-          if (nav === 'contact-nav') {
+          $(nav).addClass('active');
+          $(text).fadeIn(180);
+          $(text).removeClass('inactive');
+          if (nav === '#contact-nav') {
             $('#verticalContact').fadeIn(500);
           } else {
             $('#verticalContact').fadeOut(10);
@@ -66,26 +66,26 @@
       };
 
       function remove(cl) {
-        if (cl !== 'we-nav') { 
+        if (cl !== '#we-nav') { 
           $('#we-nav').removeClass('active'); 
         }
-        if (cl !== 'lets-nav') { 
+        if (cl !== '#lets-nav') { 
           $('#lets-nav').removeClass('active');
           $('#lets-text').fadeOut(0); 
         }
-        if (cl !== 'about-nav') { 
+        if (cl !== '#about-nav') { 
           $('#about-nav').removeClass('active');
           $('#about-text').fadeOut(0);
         }
-        if (cl !== 'services-nav') {
+        if (cl !== '#services-nav') {
           $('#services-nav').removeClass('active');
           $('#service-text').fadeOut(0);
         }
-        if (cl !== 'blog-nav') {
+        if (cl !== '#blog-nav') {
           $('#blog-nav').removeClass('active');
           $('#blog-text').fadeOut(0);
         }
-        if (cl !== 'contact-nav') {
+        if (cl !== '#contact-nav') {
           $('#contact-nav').removeClass('active');
           $('#contact-text').fadeOut(0);
         }
@@ -102,17 +102,17 @@
       $(function() {
         $(window).scroll(function() {
           if (isVisible($("#first")) || isVisible($("#first-xs"))) {
-            navigate('we-nav', 'we-text');
+            navigate('#we-nav', '#we-text');
           } else if (isVisible($("#second")) || isVisible($("#second-xs"))) {
-            navigate('lets-nav', 'lets-text');
+            navigate('#lets-nav', '#lets-text');
           } else if (isVisible($("#third")) || isVisible($("#third-xs"))) {
-            navigate('about-nav', 'about-text');
+            navigate('#about-nav', '#about-text');
           } else if (isVisible($("#fourth")) || isVisible($("#fourth-xs"))) {
-            navigate('services-nav', 'service-text');
+            navigate('#services-nav', '#service-text');
           } else if (isVisible($("#fifth")) || isVisible($("#fifth-xs"))) {
-            navigate('blog-nav', 'blog-text');
+            navigate('#blog-nav', '#blog-text');
           } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
-            navigate('contact-nav', 'contact-text');
+            navigate('#contact-nav', '#contact-text');
           }
         });
       });
