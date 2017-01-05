@@ -18,6 +18,8 @@
   </head>
   <body onload="detect(); initMap(); goTo('#we');">
     <script>
+      var pages = [ '#we', '#lets', '#about', '#services', '#blog', '#contact' ];
+
       function detect() {
         if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || 
           navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) ||
@@ -65,30 +67,13 @@
       };
 
       function remove(cl) {
-        if (cl !== '#we-nav') { 
-          $('#we-nav').removeClass('active'); 
-        }
-        if (cl !== '#lets-nav') { 
-          $('#lets-nav').removeClass('active');
-          $('#lets-text').fadeOut(0); 
-        }
-        if (cl !== '#about-nav') { 
-          $('#about-nav').removeClass('active');
-          $('#about-text').fadeOut(0);
-        }
-        if (cl !== '#services-nav') {
-          $('#services-nav').removeClass('active');
-          $('#service-text').fadeOut(0);
-        }
-        if (cl !== '#blog-nav') {
-          $('#blog-nav').removeClass('active');
-          $('#blog-text').fadeOut(0);
-        }
-        if (cl !== '#contact-nav') {
-          $('#contact-nav').removeClass('active');
-          $('#contact-text').fadeOut(0);
-        }
-      };
+        pages.forEach(function(page) {
+          if (cl !== page + '-nav') {
+            $(page + '-nav').removeClass('active');
+            $(page + '-text').fadeOut(0);
+          }
+        });
+      }
 
       function isVisible($el) {
         var winTop = $(window).scrollTop();
@@ -107,7 +92,7 @@
           } else if (isVisible($("#third")) || isVisible($("#third-xs"))) {
             navigate('#about-nav', '#about-text');
           } else if (isVisible($("#fourth")) || isVisible($("#fourth-xs"))) {
-            navigate('#services-nav', '#service-text');
+            navigate('#services-nav', '#services-text');
           } else if (isVisible($("#fifth")) || isVisible($("#fifth-xs"))) {
             navigate('#blog-nav', '#blog-text');
           } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
@@ -127,7 +112,7 @@
         <span class="nav-text inactive" id="about-text">ABOUT US</span>
       </div>
       <div class="services diamond" onclick="goTo('#services');" id="services-nav">
-        <span class="nav-text inactive" id="service-text">SERVICES</span>
+        <span class="nav-text inactive" id="services-text">SERVICES</span>
       </div>
       <div class="blog diamond" onclick="goTo('#blog');" id="blog-nav">
         <span class="nav-text inactive" id="blog-text">BLOG</span>
