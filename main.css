@@ -599,3 +599,45 @@
 @media (min-width: 1200px) {
     .logo { padding: 20% 18%; }
 }
+
+/* FLEX */
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.flex.flex-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.flex.flex-wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+.flex.flex-center {
+    -webkit-align-items: center;
+         -ms-flex-align: center;
+            align-items: center;
+}
+.flex > * {
+    -webkit-box-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+}
+
+.flex > .flex-fit {
+    -webkit-box-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+                overflow: auto;
+}
+.flex > .flex-fit.no-scroll { overflow: visible; }
