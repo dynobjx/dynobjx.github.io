@@ -119,7 +119,7 @@
 .no-padding { padding: 0px !important; }
 .no-margin { margin: 0px !important; }
 .first-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/c303ed7208d454f18cd4005b20498813ab4097a0/rsz_01_initial%20image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d0984b756e894a2d0a936f450afd53e10a3d0bc/01_Image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -221,7 +221,7 @@
 /* LET'S DO SOFTWARE */
 .first-page { height: 96.5vh; }
 .lets-do-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/c303ed7208d454f18cd4005b20498813ab4097a0/rsz_02_image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d0984b756e894a2d0a936f450afd53e10a3d0bc/02_Image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -256,7 +256,7 @@
 .dynamic-text.address { color: #A1A1A1; margin: 0px; }
 /* ABOUT */
 .about-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/03_Image.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d0984b756e894a2d0a936f450afd53e10a3d0bc/03_Image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -318,7 +318,7 @@
     right: 15px;
 }
 .services-image {
-    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/04_Image_no_blue.png');
+    background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d0984b756e894a2d0a936f450afd53e10a3d0bc/04_Image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
