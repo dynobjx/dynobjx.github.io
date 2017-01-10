@@ -9,7 +9,7 @@
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/90eff4e/main.css"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/1d9707e/main.css"/>
     <meta name="description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/>
     <meta prefix="og: http://ogp.me/ns#" property="og:type" content="blog"/>
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/>
@@ -70,7 +70,7 @@
         var winBottom = winTop + $(window).height();
         var elTop = $el.offset().top;
         var elBottom = elTop + $el.height();
-        return ((elBottom<= winBottom) && (elTop >= winTop));
+        return (elBottom - winTop >= $el.height()/2) && (elBottom - winTop <= $el.height() * elBottom/$el.height());
       }
 
       $(function() {
@@ -85,6 +85,19 @@
             navigate('#services-nav', '#services-text');
           } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
             navigate('#contact-nav', '#contact-text');
+          }
+          
+
+          // DETECT FIXED FOOTER
+          if ($('body').scrollTop() >= $('#we').height() - $(window).height() + $('#footer').height()) {
+            if (!$('#footer').hasClass('fixed')) {
+              $('#footer').addClass('fixed');
+              $('#contact').css('margin-bottom', $('#footer').height());
+            }
+          } else {
+            if ($('#footer').hasClass('fixed')) {
+              $('#footer').removeClass('fixed');
+            }
           }
         });
       });
@@ -107,8 +120,8 @@
       </div>
     </div>
     <!-- WE ARE DYNAMICOBJX -->
-    <div class="page flex stretch-children">
-      <div class="navbar navbar-static-top header-shadow no-margin" id="we">
+    <div class="page flex stretch-children" id="we">
+      <div class="navbar navbar-static-top header-shadow no-margin">
         <div class="container flex flex-row flex-center">
           <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
           <div class="flex-fit">
@@ -145,6 +158,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="col-sm-12 lets-do-footer flex flex-row flex-center" id="footer">
+      <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
+      <div class="flex-fit">
+        <p class="pull-right dynamic-text address">
+          3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
+          Ortigas Center, Pasig City<br>
+          Philippines 1605<br>
+        </p>
       </div>
     </div>
     <!-- LETS DO SOFTWARE -->
@@ -193,16 +216,6 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-12 lets-do-footer flex flex-row flex-center">
-        <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
-        <div class="flex-fit">
-          <p class="pull-right dynamic-text address">
-            3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
-            Ortigas Center, Pasig City<br>
-            Philippines 1605<br>
-          </p>
-        </div>
-      </div>
     </div>
     <!-- ABOUT US -->
     <div class="col-sm-12 no-padding page flex stretch-children about" id="about">
@@ -231,16 +244,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-12 lets-do-footer flex flex-row flex-center">
-        <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
-        <div class="flex-fit">
-          <p class="pull-right dynamic-text address">
-            3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
-            Ortigas Center, Pasig City<br>
-            Philippines 1605<br>
-          </p>
         </div>
       </div>
     </div>
@@ -275,16 +278,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-12 lets-do-footer flex flex-row flex-center">
-        <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
-        <div class="flex-fit">
-          <p class="pull-right dynamic-text address">
-            3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
-            Ortigas Center, Pasig City<br>
-            Philippines 1605<br>
-          </p>
         </div>
       </div>
     </div>
@@ -327,16 +320,6 @@
             <br>
             <br>
           </div>
-        </div>
-      </div>
-      <div class="col-sm-12 lets-do-footer flex flex-row flex-center">
-        <img src="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/00_dynobjx_logo_header.png" class="dynamic-image" alt="Dynamic Objx logo">
-        <div class="flex-fit">
-          <p class="pull-right dynamic-text address">
-            3010 Jollibee Plaza, F. Ortigas Jr Rd<br>
-            Ortigas Center, Pasig City<br>
-            Philippines 1605<br>
-          </p>
         </div>
       </div>
     </div>
