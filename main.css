@@ -109,6 +109,7 @@
     left: 0;
     bottom: 0px;
     width: 100%;
+    z-index: 3;
 }
 .image-height.text-body::-webkit-scrollbar-thumb { background-color: #9A9A9A !important; }
 .text-body.content-height::-webkit-scrollbar-track, .with-scroll::-webkit-scrollbar-track, .flex-fit::-webkit-scrollbar-track { background-color: transparent !important; }
