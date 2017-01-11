@@ -86,14 +86,16 @@
           } else if (isVisible($("#sixth")) || isVisible($("#sixth-xs"))) {
             navigate('#contact-nav', '#contact-text');
           }
-          
 
           // DETECT FIXED FOOTER
-          if ($('body').scrollTop() >= $('#we').height() - $(window).height() + $('#footer').height()) {
+          const offsetHeight = $('#we').height() - $(window).height();
+          if ($('body').scrollTop() >= offsetHeight + $('#footer').height()) {
             if (!$('#footer').hasClass('fixed')) {
-              $('#footer').addClass('fixed');
+              $('#footer').addClass('fixed').fadeIn('slow');
               $('#contact').css('margin-bottom', $('#footer').height());
             }
+          } else if ($('body').scrollTop() <= offsetHeight) {
+            $('#footer').hide();
           } else {
             if ($('#footer').hasClass('fixed')) {
               $('#footer').removeClass('fixed');
