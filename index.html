@@ -9,7 +9,7 @@
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/1c466e0/main.css"/>
+    <link rel="stylesheet" href="main.css"/>
     <meta name="description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/>
     <meta prefix="og: http://ogp.me/ns#" property="og:type" content="blog"/>
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/>
@@ -93,11 +93,21 @@
             if (!$('#footer').hasClass('fixed')) {
               $('#footer').addClass('fixed').fadeIn('slow');
               $('#contact').css('margin-bottom', $('#footer').height());
+              $('#we-nav').addClass('landscape');
+              $('#lets-nav').addClass('landscape');
+              $('#about-nav').addClass('landscape');
+              $('#services-nav').addClass('landscape');
+              $('#contact-nav').addClass('landscape');
             }
           } else if ($('body').scrollTop() <= offsetHeight) {
             $('#footer').hide();
           } else {
             if ($('#footer').hasClass('fixed')) {
+              $('#we-nav').removeClass('landscape');
+              $('#lets-nav').removeClass('landscape');
+              $('#about-nav').removeClass('landscape');
+              $('#services-nav').removeClass('landscape');
+              $('#contact-nav').removeClass('landscape');
               $('#footer').removeClass('fixed');
             }
           }
@@ -107,7 +117,7 @@
 
     <div class="vertical-contact" id="verticalContact"></div>
     <div class="vertical-line">
-      <div class="we diamond" onclick="goTo('#we');" id="we-nav"></div>
+      <div class="we diamond active" onclick="goTo('#we');" id="we-nav"></div>
       <div class="lets diamond" onclick="goTo('#lets');" id="lets-nav">
         <span class="nav-text inactive" id="lets-text">LET'S DO SOFTWARE TOGETHER</span>
       </div>
@@ -191,7 +201,7 @@
           </div>
           <div class="dynamic-text col-xs-offset-1 col-xs-10">
             <h1 class="title-text second-title content-margin">LET'S DO SOFTWARE TOGETHER</h1>
-            <br><br>
+            <br class="hide-landscape"><br class="hide-landscape">
             <div class="text-color second-text" id="second">
               <p class="content-margin">
                 Java, iOS (iPhone - iPad), Android, Play Framework 2.0
@@ -238,7 +248,7 @@
           </div>
           <div class="dynamic-text col-xs-offset-1 col-xs-10" id="third">
             <span class="h1-text title-text about content-margin">ABOUT US</span>
-            <br><br>
+            <br class="hide-landscape"><br class="hide-landscape">
             <br><br>
             <div class="text-color about">
               <p class="content-margin">
@@ -269,7 +279,7 @@
           </div>
           <div class="dynamic-text col-xs-offset-1 col-xs-10" id="fourth">
             <span class="h1-text title-text services content-margin">SERVICES</span>
-            <br><br>
+            <br class="hide-landscape"><br class="hide-landscape">
             <br><br>
             <div class="text-color services">
               <p class="content-margin">
