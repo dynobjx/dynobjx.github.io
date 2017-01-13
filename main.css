@@ -48,7 +48,11 @@
     position: fixed;
     top: 23%;
     left: 14px;
-    z-index: 1;
+    z-index: 1;    
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
 }
 .diamond:after {
     content: '';
@@ -567,10 +571,6 @@
         top: 20%;
         left: 5.5px;
         z-index: 1;
-        -webkit-transition: 0.5s ease-out;
-        -moz-transition: 0.5s ease-out;
-        -o-transition: 0.5s ease-out;
-        transition: 0.5s ease-out;
     }
     .diamond:after {
         content: '';
