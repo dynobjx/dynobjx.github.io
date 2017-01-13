@@ -93,21 +93,13 @@
             if (!$('#footer').hasClass('fixed')) {
               $('#footer').addClass('fixed').fadeIn('slow');
               $('#contact').css('margin-bottom', $('#footer').height());
-              $('#we-nav').addClass('landscape');
-              $('#lets-nav').addClass('landscape');
-              $('#about-nav').addClass('landscape');
-              $('#services-nav').addClass('landscape');
-              $('#contact-nav').addClass('landscape');
+              $('.diamond').addClass('landscape');
             }
           } else if ($('body').scrollTop() <= offsetHeight) {
             $('#footer').hide();
           } else {
             if ($('#footer').hasClass('fixed')) {
-              $('#we-nav').removeClass('landscape');
-              $('#lets-nav').removeClass('landscape');
-              $('#about-nav').removeClass('landscape');
-              $('#services-nav').removeClass('landscape');
-              $('#contact-nav').removeClass('landscape');
+              $('.diamond').removeClass('landscape');
               $('#footer').removeClass('fixed');
             }
           }
