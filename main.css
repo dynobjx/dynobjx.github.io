@@ -482,6 +482,10 @@
 }
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
+    .page { 
+        min-height: 100vh;
+        height: inherit;
+    }
     .nav-text { font-size: 0px !important; }
     .vertical-contact {  display: none !important; }
     .vertical-line { left: 20px; }
