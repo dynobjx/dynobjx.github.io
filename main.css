@@ -48,7 +48,11 @@
     position: fixed;
     top: 23%;
     left: 14px;
-    z-index: 1;
+    z-index: 1;    
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
 }
 .diamond:after {
     content: '';
@@ -62,10 +66,10 @@
 }
 .logo-margin { margin-top: 20px; }
 .h1-text { font-size: 36px; }
-.lets.diamond { top: 29%; }
-.about.diamond { top: 35%; }
-.services.diamond { top: 41%; }
-.contact.diamond { top: 47%; }
+.lets.diamond { top: 30%; }
+.about.diamond { top: 37%; }
+.services.diamond { top: 44%; }
+.contact.diamond { top: 51%; }
 .we.diamond.active { border-bottom-color: #5486AD; }
 .we.diamond.active:after { border-top-color: #5486AD; }
 .lets.diamond.active { border-bottom-color: #9EFFBC; }
@@ -253,7 +257,7 @@
     margin-top: 15%;
 }
 .text-color.second-text { color: white; }
-.page { min-height: 100vh; }
+.page { height: 100vh; }
 .page.image-height, .page > .image-height { height: 100vh; }
 .page > div > .content-height > .left-image { height: 110%; }
 .lets-do > div .triangle-left { border-right: 45px solid #9EFFBC; }
@@ -478,6 +482,10 @@
 }
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
+    .page { 
+        min-height: 100vh;
+        height: inherit;
+    }
     .nav-text { font-size: 0px !important; }
     .vertical-contact {  display: none !important; }
     .vertical-line { left: 20px; }
@@ -485,7 +493,7 @@
         border: 15px solid transparent;
         border-bottom-color: white;
         position: fixed;
-        top: 23%;
+        top: 24%;
         left: 5.5px;
         z-index: 1;
     }
@@ -497,10 +505,10 @@
         border: 15px solid transparent;
         border-top-color: white;
     }
-    .lets.diamond { top: 30%; }
-    .about.diamond { top: 37%; }
-    .services.diamond { top: 44%; }
-    .contact.diamond { top: 51%; }
+    .lets.diamond { top: 31%; }
+    .about.diamond { top: 38%; }
+    .services.diamond { top: 45%; }
+    .contact.diamond { top: 52%; }
     .title-text { margin-top: 80px; }
     .bg-black { background: black; }
     .text-body, .second.text-body, .about.text-body, .services.text-body, .contact.text-body { background: transparent; }
@@ -558,7 +566,35 @@
 @media (min-width: 1200px) {
     .logo { padding: 20% 18%; }
 }
-
+@media (max-height: 500px) {
+    .diamond.landscape { top: 2%; }
+    .diamond {
+        border: 15px solid transparent;
+        border-bottom-color: white;
+        position: fixed;
+        top: 20%;
+        left: 5.5px;
+        z-index: 1;
+    }
+    .diamond:after {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 15px;
+        border: 15px solid transparent;
+        border-top-color: white;
+    }
+    .lets.diamond.landscape { top: 17%; }
+    .lets.diamond { top: 35%; }
+    .about.diamond.landscape { top: 32%; }
+    .about.diamond { top: 50%; }
+    .services.diamond.landscape { top: 47%; }
+    .services.diamond { top: 65%; }
+    .contact.diamond.landscape { top: 62%; }
+    .contact.diamond { top: 80%; }
+    .hide-landscape { display: none; }
+    .header-padding { padding: 5px 0px; }
+}
 /* FLEX */
 .flex {
     display: -webkit-box;
@@ -599,7 +635,6 @@
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
 }
-
 .flex > .flex-fit {
     -webkit-box-flex: 1 1 auto;
         -webkit-flex: 1 1 auto;
