@@ -356,7 +356,10 @@
     position: absolute;
 }
 /* CONTACT US */
-#mapid { z-index: 1; height: 100%; }
+#mapid { 
+    z-index: 1;
+    height: 100vh; 
+}
 .contact.text-body { background-color: #2A2B12; }
 .contact.title-text { color: #BAD843; }
 .contact-us { color: white; }
