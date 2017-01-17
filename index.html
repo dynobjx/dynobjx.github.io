@@ -24,13 +24,11 @@
       function initMap () {
         L.mapbox.accessToken = 'pk.eyJ1Ijoia2xiaWF6b24iLCJhIjoiY2l4anRuOGZnMDAyMTJ6bm5wNDRhNGo1MSJ9.F2YkaoVTOG1M6o2pzb8sKQ';
         var mymap = L.mapbox.map('mapid', 'mapbox.streets', {
-                    scrollWheelZoom: true,
-                    maxZoom: 19,
                     zoomControl:false
                   }).setView([14.5881071, 121.0614795], 17);
         var marker = L.marker([14.5881071, 121.0614795]).addTo(mymap);
         marker.bindPopup("<b>Dynamic Objx Labs Inc.</b>").openPopup();
-
+        mymap.scrollWheelZoom.disable();
         $('#verticalContact').fadeOut(10);
       };
 
