@@ -193,6 +193,10 @@
     right: 0px;
     bottom: 92px;
     cursor: pointer;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 .mid-left {
     width: 9px;
@@ -206,6 +210,10 @@
     right: 0px;
     bottom: 118px;
     cursor: pointer;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 .triangle-right {
     width: 0;
@@ -218,6 +226,10 @@
     bottom: 92px;
     cursor: pointer;
     z-index: 1;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 .mid-right {
     width: 9px;
@@ -233,6 +245,10 @@
     border-bottom-left-radius: 30px;
     cursor: pointer;
     z-index: 2;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 /* LET'S DO SOFTWARE */
 .lets-do-image {
@@ -257,7 +273,7 @@
     margin-top: 15%;
 }
 .text-color.second-text { color: white; }
-.page { height: 100vh; }
+.page { min-height: 100vh; }
 .page.image-height, .page > .image-height { height: 100vh; }
 .page > div > .content-height > .left-image { height: 110%; }
 .lets-do > div .triangle-left { border-right: 45px solid #9EFFBC; }
@@ -408,9 +424,13 @@
     margin-left:    -mox-calc(100% - 12px);
     margin-left:      -o-calc(100% - 12px);
     margin-left:         calc(100% - 12px);
-    bottom: 222px;
+    bottom: 210px;
     cursor: pointer;
     z-index: 2;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 .contact-right {
     width: 9px;
@@ -422,10 +442,14 @@
     background: #2A2B12;
     position: absolute;
     margin-left: 100%;
-    bottom: 222px;
+    bottom: 210px;
     border-top-left-radius: 30px;
     cursor: pointer;
     z-index: 2;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
 }
 .send-us > a:hover { color: #2A2B12; }
 .send-us > a {
