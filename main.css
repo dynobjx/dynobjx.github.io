@@ -11,6 +11,10 @@
     font-family: 'signika';
     src: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/master/Signika-Regular.ttf');
 }
+@font-face {
+    font-family: 'helvetica lt';
+    src: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d939b1/Helvetica LT 87 Heavy Condensed.ttf');
+}
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
@@ -83,7 +87,7 @@
 .cursor { cursor: pointer; }
 .inactive { font-size: 0px !important; }
 .nav-text {
-    font-family: signika;
+    font-family: helvetica lt;
     font-weight: bold;
     width: 315px;
     display: inline-block;
@@ -180,6 +184,7 @@
     color: #678BA7;
     font-weight: bold;
     margin-top: 35px;
+    font-family: helvetica lt;
 }
 .content-margin { margin-bottom: 20px; }
 .text-body.content-height, .image-height.text-body { overflow: auto; }
@@ -251,6 +256,13 @@
     transition: 0.2s ease-out;
 }
 /* LET'S DO SOFTWARE */
+.lets-link {
+    text-decoration: none;
+    color: #9EFFBC;
+}
+.lets-link:hover {
+    color: #9EFFBC;
+}
 .lets-do-image {
     background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d0984b756e894a2d0a936f450afd53e10a3d0bc/02_Image.jpg');
     background-repeat: no-repeat;
