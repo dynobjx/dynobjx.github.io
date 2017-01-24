@@ -260,9 +260,7 @@
     text-decoration: none;
     color: #9EFFBC;
 }
-.lets-link:hover {
-    color: #9EFFBC;
-}
+.lets-link:hover, .lets-link:focus { color: #9EFFBC; }
 .lets-do-image {
     background-image: url('https://cdn.rawgit.com/dynobjx/dynobjx.github.io/3d0984b756e894a2d0a936f450afd53e10a3d0bc/02_Image.jpg');
     background-repeat: no-repeat;
