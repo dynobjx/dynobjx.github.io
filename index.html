@@ -9,7 +9,7 @@
     <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/6b24dd5/main.css"/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/dynobjx/dynobjx.github.io/2c2a90a/main.css"/>
     <meta name="description" content="We&#039;re a web &amp; mobile software development company based in Manila, Philippines focused on Java and IOS (iPhone &amp; iPad), Android App Development"/>
     <meta prefix="og: http://ogp.me/ns#" property="og:type" content="blog"/>
     <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Web &amp; Mobile App Development | Manila Philippines | DYNAMIC OBJX"/>
@@ -84,7 +84,6 @@
           if (excess !== undefined) {
             $('#left-' + section).css('bottom', (section !== 'contact' ? 92 : 170) + (excess >= 0 ? excess : 0));
             $('#right-' + section).css('bottom',  (section !== 'contact' ? 92 : 170) + (excess >= 0 ? excess : 0));
-            $('#midLeft-' + section).css('bottom', (section !== 'contact' ? 119 : 210) + (excess >= 0 ? excess : 0));
             $('#midRight-' + section).css('bottom', (section !== 'contact' ? 122 : 210) + (excess >= 0 ? excess : 0));
           }
         }
@@ -162,7 +161,6 @@
         <div class="col-sm-6 no-padding first-image" id="we-left">
           <div class="hidden-xs">
             <div class="triangle-left" onclick="goTo('#lets');" id="left-we"></div>
-            <div class="mid-left" onclick="goTo('#lets');" id="midLeft-we"></div>
             <div class="triangle-right" onclick="goTo('#lets');" id="right-we"></div>
             <div class="mid-right" onclick="goTo('#lets');" id="midRight-we"></div>
           </div>
@@ -205,7 +203,6 @@
         <div class="col-sm-6 no-padding lets-do-image">
           <div class="cursor hidden-xs">
             <div class="triangle-left" onclick="goTo('#about');" id="left-lets"></div>
-            <div class="mid-left" onclick="goTo('#about');" id="midLeft-lets"></div>
             <div class="triangle-right" onclick="goTo('#about');" id="right-lets"></div>
             <div class="mid-right" onclick="goTo('#about');" id="midRight-lets"></div>
           </div>
@@ -240,7 +237,6 @@
         <div class="col-sm-6 no-padding about-image">
           <div class="hidden-xs">
             <div class="triangle-left" onclick="goTo('#services');" id="left-about"></div>
-            <div class="mid-left" onclick="goTo('#services');" id="midLeft-about"></div>
             <div class="triangle-right" onclick="goTo('#services');" id="right-about"></div>
             <div class="mid-right" onclick="goTo('#services');" id="midRight-about"></div>
           </div>
@@ -280,7 +276,6 @@
           <div class="hidden-xs">
             <div class="col-sm-12 no-padding blue-back"></div>
             <div class="triangle-left" onclick="goTo('#contact');" id="left-services"></div>
-            <div class="mid-left" onclick="goTo('#contact');" id="midLeft-services"></div>
             <div class="triangle-right" onclick="goTo('#contact');" id="right-services"></div>
             <div class="mid-right" onclick="goTo('#contact');" id="midRight-services"></div>
           </div>
@@ -316,7 +311,6 @@
         <div class="col-sm-6 no-padding contact contact-image">
           <div id="mapid"></div>
           <div class="triangle-left hidden-xs" onclick="goTo('#we');" id="left-contact"></div>
-          <div class="contact-left hidden-xs" onclick="goTo('#we');" id="midLeft-contact"></div>
           <div class="triangle-right hidden-xs" onclick="goTo('#we');" id="right-contact"></div>
           <div class="contact-right hidden-xs" onclick="goTo('#we');" id="midRight-contact"></div>
         </div>
