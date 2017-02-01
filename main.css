@@ -204,23 +204,6 @@
     -o-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
 }
-.mid-left {
-    width: 9px;
-    height: 21px;
-    -webkit-transform: skew(47deg);
-    -moz-transform: skew(47deg);
-    -o-transform: skew(47deg);
-    transform: skew(47deg);
-    background: white;
-    position: absolute;
-    right: 0px;
-    bottom: 118px;
-    cursor: pointer;
-    -webkit-transition: 0.2s ease-out;
-    -moz-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
-    transition: 0.2s ease-out;
-}
 .triangle-right {
     width: 0;
     height: 0;
@@ -248,13 +231,28 @@
     position: absolute;
     right: -11px;
     bottom: 122px;
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 8px;
     cursor: pointer;
     z-index: 2;
     -webkit-transition: 0.2s ease-out;
     -moz-transition: 0.2s ease-out;
     -o-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
+}
+.mid-right:after {
+    width: 9px;
+    height: 18px;
+    -webkit-transform: skew(65deg);
+    -moz-transform: skew(65deg);
+    -o-transform: skew(65deg);
+    transform: skew(65deg);
+    background: white;
+    position: absolute;
+    right: 14px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+    z-index: 2;
+    content: '';
 }
 /* LET'S DO SOFTWARE */
 .lets-link {
@@ -290,7 +288,7 @@
 .lets-do > div .triangle-left { border-right: 45px solid #9EFFBC; }
 .lets-do > div .mid-left { background: #332D21; }
 .lets-do > div .triangle-right { border-left: 45px solid #9EFFBC; }
-.lets-do > div .mid-right { background: #332D21; }
+.lets-do > div .mid-right, .lets-do > div .mid-right:after { background: #332D21; }
 .lets-do-footer {
     background-color: white;
     height: 10vh;
@@ -321,7 +319,7 @@
 .about > div .triangle-left { border-right: 45px solid #ECD476; }
 .about > div .mid-left { background: #7C6D47; }
 .about > div .triangle-right { border-left: 45px solid #ECD476; }
-.about > div .mid-right { background: #7C6D47; }
+.about > div .mid-right, .about > div .mid-right:after { background: #7C6D47; }
 /* SERVICES */
 .services > .left-image { width: 1150px; }
 .services.text-body { background-color: #6E6E6D; }
@@ -340,7 +338,7 @@
 .services > div .triangle-left { border-right: 45px solid #8FF1FA; }
 .services > div .mid-left { background: #5A5958; }
 .services > div .triangle-right { border-left: 45px solid #8FF1FA; }
-.services > div .mid-right { background: #5A5958; }
+.services > div .mid-right, .services > div .mid-right:after { background: #5A5958; }
 .download-btn {
     font-size: 19px;
     color: #8DEAF2;
@@ -422,27 +420,6 @@
     bottom: 182px;
     z-index: 2;
 }
-.contact-left {
-    width: 9px;
-    height: 19px;
-    -webkit-transform: skew(-45deg);
-    -moz-transform: skew(-45deg);
-    -o-transform: skew(-45deg);
-    transform: skew(-45deg);
-    background: #2A2B12;
-    position: absolute;
-    margin-left: -webkit-calc(100% - 12px);
-    margin-left:    -mox-calc(100% - 12px);
-    margin-left:      -o-calc(100% - 12px);
-    margin-left:         calc(100% - 12px);
-    bottom: 210px;
-    cursor: pointer;
-    z-index: 2;
-    -webkit-transition: 0.2s ease-out;
-    -moz-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
-    transition: 0.2s ease-out;
-}
 .contact-right {
     width: 9px;
     height: 19px;
@@ -452,7 +429,7 @@
     transform: skew(45deg);
     background: #2A2B12;
     position: absolute;
-    margin-left: 100%;
+    margin-left: 100.5%;
     bottom: 210px;
     border-top-left-radius: 30px;
     cursor: pointer;
@@ -461,6 +438,21 @@
     -moz-transition: 0.2s ease-out;
     -o-transition: 0.2s ease-out;
     transition: 0.2s ease-out;
+}
+.contact-right:after {
+    width: 9px;
+    height: 19px;
+    -webkit-transform: skew(-63deg);
+    -moz-transform: skew(-63deg);
+    -o-transform: skew(-63deg);
+    transform: skew(-63deg);
+    background: #2A2B12;
+    position: absolute;
+    left: -12px;
+    border-top-right-radius: 30px;
+    cursor: pointer;
+    z-index: 2;
+    content: '';
 }
 .send-us > a:hover { color: #2A2B12; }
 .send-us > a {
