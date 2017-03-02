@@ -510,6 +510,12 @@
     .header-padding { padding-bottom: 0px; }
     .dynamic-image { height: 17px; }
 }
+@media (max-width: 460px) {
+    .send-us { 
+        padding: 0px 5px 1px 5px;
+        font-size: 13px !important;
+    }
+}
 /* MEDIA QUERIES */
 @media (max-width: 767px) {
     .page { 
@@ -577,10 +583,6 @@
     .content-height { width: 100%; }
     .navbar > .container { height: 60px; }
     .dynamic-text.address { font-size: 12px; }
-    .send-us { 
-        padding: 0px 5px 1px 5px;
-        font-size: 14px !important;
-    }
     #mapid { height: 100%; }
 }
 @media (max-width: 900px) {
@@ -597,7 +599,7 @@
     .contact-us { font-size: 20px; }
     .contact.title-text { font-size: 30px; }
     .logo { padding: 27% 18%; }
-    .send-us { font-size: 17px; }
+    .send-us { font-size: 16px; }
 }
 @media (min-width: 1200px) {
     .logo { padding: 20% 18%; }
